@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EventPlanner.Views.Flash"
+             x:Name="flash">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="evd" HorizontalOptions="FillAndExpand" x:Name="img1"/>
+
+            <Label x:Name="img" Margin="0,-300,0,0" Text="EVENT PLANNER" FontSize="25" FontAttributes="Bold"
+                             BackgroundColor="Transparent" TextColor="#000"/>
+            <Grid RowDefinitions="auto,auto">
+                <Frame Grid.Row="1" Margin="100,200,-50,-1000" BackgroundColor="#00CCD6" HeightRequest="40"
+                       CornerRadius="400"
+                       ></Frame>
+                <Frame Grid.Row="1" Margin="130,220,-50,-1000" BackgroundColor="Aliceblue" HeightRequest="30"
+                       CornerRadius="400"
+                       ></Frame>
+
+            </Grid>
+        
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

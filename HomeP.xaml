@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             
+         BackgroundColor="#00CCD6"
+            x:Class="EventPlanner.Views.HomeP"
+                NavigationPage.HasNavigationBar="False"
+                        xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Name="hom"
+             >
+    
+    <Grid RowDefinitions="1*,2*, 0*,0*" >
+
+
+        <Frame Grid.Row="0" BackgroundColor="Transparent"  Margin="0" Padding="0" HeightRequest="100">
+
+            <Grid >
+                <ImageButton Source="c4.png"  
+                            Margin="0,-80,260,80" WidthRequest="20"  BackgroundColor="Transparent"
+                             Padding="10,100,60,100"     Clicked="close_Clicked" />
+
+                <Label Text="Event Planning" Margin="0,90,85,0" FontSize="20" FontAttributes="Bold"  Padding="10,0,60,0" 
+          WidthRequest="200" BackgroundColor="Transparent" TextColor="#000"
+          HorizontalOptions="StartAndExpand" VerticalOptions="Start" />
+
+                <Frame BackgroundColor="Transparent" CornerRadius="50" Margin="200,0,0,100"  >
+                    <Image Source="ad.png"   Aspect="AspectFit" />
+                </Frame>
+
+                <Label Text="Design By Federal polytechnic Offa Student" TextColor="#000"
+                       Margin="0,150,0,0"
+                       Padding="0,0,180,0" FontAttributes="Bold"
+                       HorizontalTextAlignment="Start"
+                       />
+
+
+            </Grid>
+
+        </Frame>
+
+
+
+        <Frame Grid.Row="1" BackgroundColor="#fff"  CornerRadius="20" Margin="0,-50,0,-10">
+          
+            <Grid>
+
+             
+                                             <Frame Margin="0,30,200,-30" Grid.Row="0">
+                    <Grid>
+                        <ImageButton Source="pl" Margin="0,-30,0,0"
+                                     BackgroundColor="Transparent" Clicked="nevent_Clicked" />
+                        <Label Text="Create 
+       Event" FontAttributes="Bold" FontSize=" 20"
+                               Margin="0,70,0,0" Padding="0,0,0,0"
+                               HorizontalTextAlignment="Start"
+                               />
+                    </Grid>
+                </Frame>
+
+
+                    <Frame Margin="190,30,0,-30" Grid.Row="0" >
+                        <Grid>
+                        <ImageButton Margin="0,-30,0,0" Source="s1" BackgroundColor="Transparent" Clicked="tsklst_Clicked" />
+                            <Label Text="Task List" FontAttributes="Bold"
+                               Margin="0,100,0,0" Padding="0,0,0,0"
+                               HorizontalTextAlignment="Start" FontSize="20"
+                               />
+                        </Grid>
+                    </Frame>
+
+
+
+
+
+                <Frame Margin="0,230,200,-260" Grid.Row="0" >
+                    <Grid>
+                        <ImageButton  Margin="0,-30,0,0" Source="na" BackgroundColor="Transparent" Clicked="eguest_Clicked" />
+                        <Label Text="Guest" FontAttributes="Bold"
+                               Margin="0,110,0,0" Padding="0,0,10,0"
+                               HorizontalTextAlignment="Start" FontSize="20"
+                               />
+                    </Grid>
+                </Frame>
+
+    <Frame Margin="190,230,0,-260" Grid.Row="0">
+                    <Grid>
+                        <ImageButton Margin="0,-30,0,0" Source="pl" BackgroundColor="Transparent" Clicked="Button_Clicked" />
+                        <Label Text="Planning" FontAttributes="Bold"
+                               Margin="0,100,0,0" Padding="0,0,10,0"
+                               HorizontalTextAlignment="Start"
+                               FontSize="20"
+                               />
+                    </Grid>
+                </Frame>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <Frame Grid.Row="2" Padding="0" HeightRequest="250" WidthRequest="250" 
+               VerticalOptions="EndAndExpand"
+               CornerRadius="125" BackgroundColor="#cfd0d8" HorizontalOptions="StartAndExpand"
+               Margin="0,0,0,-180">
+                </Frame>
+
+                <Frame Grid.Row="2" Padding="0" HeightRequest="250" WidthRequest="250" 
+               VerticalOptions="EndAndExpand"
+               CornerRadius="125" BackgroundColor="#00CCD6" HorizontalOptions="StartAndExpand"
+               Margin="0,0,0,-200"
+               >
+                    <Label Text="@2023" Margin="90,20,0,0" FontAttributes="Bold" TextColor="Black" />
+                </Frame>
+
+
+
+
+
+            </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+            
+            
+          
+        </Frame>
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</ContentPage>
+
+
+
+
+

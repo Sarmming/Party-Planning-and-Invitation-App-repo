@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EventPlanner.Custom_Renderer"
+             x:Class="EventPlanner.Views.finished"
+             BackgroundColor="#fff"
+             x:Name="finishs"
+             >
+    <ScrollView>
+   <Grid RowDefinitions="1*,5*, 1*,0*">
+        <Frame Grid.Row="0" Padding="0" HeightRequest="250" WidthRequest="250" 
+               CornerRadius="125" BackgroundColor="#cdf" HorizontalOptions="EndAndExpand"
+               Margin="10,-80,-80,0">
+        </Frame>
+        <Frame Grid.Row="0" Padding="0" HeightRequest="250" WidthRequest="250" 
+               CornerRadius="125" BackgroundColor="blue" HorizontalOptions="EndAndExpand"
+               Margin="10,-120,-120,0">
+        </Frame>
+        
+        <Frame Grid.Row="1" Padding="30,10,0,20">
+            <StackLayout>
+               
+                    <Frame Padding="0">
+                        <local:BorderlessEntry x:Name="ename" IsEnabled="False" FontSize="20" FontAttributes="Bold"/>
+                    </Frame>
+                <Frame  Padding="0">                        <local:BorderlessEntry x:Name="owner" IsEnabled="False"/>
+                    </Frame>
+                <Frame  Padding="0">
+                        <local:BorderlessEntry x:Name="edate" IsEnabled="False" TextColor="Red"/>
+                    </Frame>
+              
+                
+
+                <StackLayout>
+                    <Frame>
+                        <local:BorderlessEntry Placeholder="Event Budget Amount" x:Name="tot" TextChanged="BorderlessEntry_TextChanged"/>
+                                            </Frame>
+                    <StackLayout>
+                        <Label x:Name="food"/>
+                        <Label x:Name="hall"/>
+                        <Label x:Name="mc"/>
+                        <Label x:Name="artist"/>
+                        <Label x:Name="tras"/>
+                        <Label x:Name="deco"/>
+                        <Label x:Name="ch"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Finalized" BorderWidth="2" CornerRadius="10" Clicked="Button_Clicked_1"/>
+                </StackLayout>
+               
+                            </StackLayout>
+            
+            </Frame>
+
+           
+       
+       
+
+    </Grid>
+    </ScrollView>
+</ContentPage>

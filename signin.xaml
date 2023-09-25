@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EventPlanner.Custom_Renderer"
+             NavigationPage.HasBackButton="False"
+             x:Class="EventPlanner.Views.signin"
+             BackgroundColor="#FFF"
+             Shell.NavBarIsVisible="False"
+             Title="Registration Form"
+
+             >
+
+
+
+    <Grid RowDefinitions="0.7*,16*, 1*">
+       
+        <Frame Grid.Row="0" Padding="0" HeightRequest="250" WidthRequest="300" 
+               CornerRadius="0" BackgroundColor="Transparent" HorizontalOptions="EndAndExpand"
+             Margin="-2,0,220,0"  >
+
+            <Label Margin="0,10,0,0" Text="All field require"  FontSize="18" FontAttributes="Italic" TextColor="#ccc" HorizontalTextAlignment="Center" />
+        </Frame>
+
+        <Frame Grid.Row="0" Padding="0" HeightRequest="220" WidthRequest="220" 
+               CornerRadius="125" BackgroundColor="#0096FF" HorizontalOptions="EndAndExpand"
+               Margin="0,-120,-120,0" 
+               ></Frame>
+        <Frame Grid.Row="0" Padding="0" HeightRequest="200" WidthRequest="200" 
+               CornerRadius="125" BackgroundColor="AliceBlue" HorizontalOptions="EndAndExpand"
+               Margin="0,-120,-120,0" 
+               ></Frame>
+        <Frame Grid.Row="0" Padding="0" HeightRequest="200" WidthRequest="160" 
+               CornerRadius="100" BackgroundColor="#0096FF" HorizontalOptions="EndAndExpand"
+                Margin="10,-150,-120,-5" 
+             
+               ></Frame>
+        <Line Grid.Row="0" BackgroundColor="blue" Margin="0,50,0,0"/>
+
+
+        <Frame Grid.Row="1"  VerticalOptions="CenterAndExpand"
+BackgroundColor="Transparent"             Margin="0,0,40,0"  HasShadow="True" CornerRadius="0" BorderColor="#ccc"
+               >
+
+
+            <StackLayout Orientation="Vertical" Spacing="15" >
+                <Frame Padding="10" HasShadow="False" CornerRadius="5" BorderColor="#ccc">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="name.png" HeightRequest="25" WidthRequest="25"/>
+                        <local:BorderlessEntry Grid.Column="1"   BackgroundColor="Transparent"
+                    VerticalOptions="Center"
+                   Placeholder="Fullname" 
+                    Keyboard="Text"
+                    WidthRequest="300" x:Name="Name"
+                    PlaceholderColor="#ccc"        />
+                    </Grid>
+                </Frame>
+
+                <Frame Padding="10" HasShadow="False" CornerRadius="5" BorderColor="#ccc">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="email2.png" HeightRequest="25" WidthRequest="25"/>
+                        <local:BorderlessEntry Grid.Column="1"   BackgroundColor="Transparent"
+                    Placeholder="Email Address" VerticalOptions="Center"
+                    Keyboard="Email"
+                    WidthRequest="300"  PlaceholderColor="#ccc"   x:Name="email" />
+                    </Grid>
+                </Frame>
+
+
+                <Frame Padding="10" HasShadow="False" CornerRadius="5" BorderColor="#ccc">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="cal2.png" HeightRequest="25" WidthRequest="25"/>
+                        <local:BorderlessEntry Grid.Column="1"   BackgroundColor="Transparent"
+                    Placeholder="Phone Number"
+                    Keyboard="Text"
+                          PlaceholderColor="#ccc"
+                    WidthRequest="300" x:Name="contact"  />
+                    </Grid>
+                </Frame>
+
+
+
+                <Frame Padding="10" HasShadow="False" CornerRadius="5" BorderColor="#ccc">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="na.png" HeightRequest="25" WidthRequest="25"/>
+                        <local:BorderlessEntry Grid.Column="1"   BackgroundColor="Transparent"
+                   Placeholder="Nationality"
+                    Keyboard="Text"   PlaceholderColor="#ccc"
+                    WidthRequest="300" x:Name="nation" />
+                    </Grid>
+                </Frame>
+                <Frame Padding="10" HasShadow="False" CornerRadius="5" BorderColor="#ccc">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="pass.png" HeightRequest="25" WidthRequest="25"/>
+                        <local:BorderlessEntry Grid.Column="1"   BackgroundColor="Transparent"
+                    PlaceholderColor="#ccc"
+                  Placeholder="Password"
+                    WidthRequest="300"
+                    IsPassword="True" x:Name="password"/>
+                    </Grid>
+                </Frame>
+
+
+                <Button
+           HeightRequest="60"
+                    BackgroundColor="#00CCD6"
+            Text="Cancel"
+                             CornerRadius="10"
+                                  Clicked="Button_Clicked"/>
+                <Button
+           HeightRequest="60"
+                    BackgroundColor="#00CCD6"
+            Text="Submit"
+         CornerRadius="10"
+                                          x:Name="regbtn"
+            Clicked="regbtn_Clicked_2"/>
+                
+                
+                                             <StackLayout Orientation="Horizontal" Spacing="10">
+                    <Label Text="Already Have an Account? " VerticalTextAlignment="Center" FontSize="16"/>
+                    <Label Text="Sign in" TextColor="DarkSlateBlue"  FontSize="18" FontAttributes="Bold"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer  NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                
+                
+                
+            </StackLayout>
+
+        </Frame>
+
+
+
+
+
+
+        <Frame Grid.Row="2" Padding="0" HeightRequest="250" WidthRequest="250" 
+               VerticalOptions="EndAndExpand"
+               CornerRadius="125" BackgroundColor="#cfd0d8" HorizontalOptions="StartAndExpand"
+               Margin="0,0,0,-180">
+        </Frame>
+
+        <Frame Grid.Row="2" Padding="0" HeightRequest="250" WidthRequest="250" 
+               VerticalOptions="EndAndExpand"
+               CornerRadius="125" BackgroundColor="#0096FF" HorizontalOptions="StartAndExpand"
+               Margin="0,0,0,-200"
+               ></Frame>
+    </Grid>
+
+</ContentPage>

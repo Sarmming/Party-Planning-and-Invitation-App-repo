@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EventPlanner.Views.Planning">
+  
+        <ScrollView>
+            <StackLayout>
+                <Label Text="List" FontSize="30" FontAttributes="Bold" />
+                <CollectionView x:Name="collectionView" SelectionMode="Single"   SelectionChanged="collectionView_SelectionChanged" 
+                     SelectedItem="{Binding  Addevent}"  >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10">
+                            <Frame CornerRadius="20" HasShadow="True" Margin="0,0">
+                                <StackLayout Orientation="Horizontal" Margin="0,0">
+                                    <Label Text="{Binding etype} "  
+                               FontSize="20" TextColor="Black"  FontAttributes="Bold" TextTransform="Uppercase" />
+                                           <Label Text="{Binding Name}"
+                               TextColor="Silver"
+                               FontSize="Small" FontAttributes="Bold"/>
+                                   <Label Text="{Binding EID}" IsVisible="False"/>
+                                    <Label Text="{Binding edate}" IsVisible="False"/>
+                                                                          </StackLayout>
+                                </Frame>
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>
+        </ScrollView>
+        
+</ContentPage>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  xmlns:local="clr-namespace:EventPlanner.Custom_Renderer"
+             x:Class="EventPlanner.Views.LoginPage"
+             Title="LoginPage"
+             Shell.NavBarIsVisible="False"
+              BackgroundColor="#0096FF"
+                 NavigationPage.HasBackButton="False"
+                        >
+    <Grid RowDefinitions="1*,2*, 0,0*" >
+
+
+        <Frame Grid.Row="0" BackgroundColor="Transparent"  Margin="0" Padding="0" HeightRequest="100">
+
+            <Grid>
+                <ImageButton Source="c3.png"  
+                            Margin="0,-80,260,80" WidthRequest="20"  BackgroundColor="Transparent"
+                             Padding="10,100,60,100"   Clicked="ImageButton_Clicked"    />
+
+                <Button Text="Create Your account" Margin="0,90,85,0" FontSize="20" FontAttributes="Bold"  Padding="10,0,60,0" 
+          WidthRequest="200" BackgroundColor="Transparent"
+          HorizontalOptions="StartAndExpand" VerticalOptions="Start"  Clicked="TapGestureRecognizer_Tapped"/>
+
+
+                <Image Source="img.png" Margin="10,0,-190,50" />
+
+                <Label Text="Event Planning Mobile 
+                       Application System "
+                       Margin="10,150,0,0"
+                       Padding="0,0,150,0" FontAttributes="Bold"
+                       
+                       />
+
+
+            </Grid>
+
+        </Frame>
+        <Frame Grid.Row="1" CornerRadius="30" Margin="0,-40,0,-20" Padding="10">
+            <Grid  BackgroundColor="#FFF"  Margin="0" Padding="0" RowDefinitions="AUTO"  >
+                <Label Text="Sign in" Grid.Row="0" FontAttributes="Bold" FontSize="25" Margin="0,0,0,20"/>
+                <Line Grid.Row="0" BackgroundColor="Blue" Margin="0,47,0,102"/>
+
+                <Frame Grid.Row="0" BorderColor="LightBlue" HasShadow="True" CornerRadius="15" Margin="0,80,0,10"
+                       Padding="0,0,0,0" HeightRequest="60">
+                    <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                        <Image VerticalOptions="Center" Source="icon_about.png" HeightRequest="25" WidthRequest="25"/>
+                        <local:BorderlessEntry Grid.Column="1"   BackgroundColor="Transparent"
+                    Placeholder="Email Address" VerticalOptions="Center"
+                    Keyboard="Email"
+                    WidthRequest="300" x:Name="email"/>
+                    </Grid>
+                </Frame>
+                
+                <Frame Grid.Row="1"  BorderColor="LightBlue" HasShadow="True" CornerRadius="15" Margin="0,0,0,280"
+                       Padding="0" HeightRequest="70">
+                <Grid ColumnDefinitions="25,*" ColumnSpacing="10">
+                    <Image VerticalOptions="Center" Source="icon_about.png" HeightRequest="25" WidthRequest="25"/>
+                    <local:BorderlessEntry Grid.Column="1"   BackgroundColor="Transparent"
+                    IsPassword="True" x:Name="password" Placeholder="Password" VerticalOptions="Center" />
+                </Grid>
+            </Frame>
+                </Grid>
+        </Frame>
+
+        
+        
+        
+        <Frame Grid.Row="2"  BackgroundColor="Transparent"  WidthRequest="30" Margin="0,-300,0,0">
+            <Grid RowDefinitions="auto">
+                <Label Grid.Row="1" Margin="0,-80,0,0" Text="Forgot Password ? " VerticalTextAlignment="Center" FontSize="16" TextColor="red"
+                   FontAttributes="Bold"
+                   />
+                <Button Text="SIGN IN" FontSize="25" FontAttributes="Bold" 
+                        Clicked="btnlogin_Clicked" Grid.Row="2"
+                        CornerRadius="10" BorderColor="#fff" BorderWidth="2"
+          BackgroundColor="#0096FF"
+          Margin="0,-90,0,160" Padding="10,10,0,10"  TextColor="#fff"
+          />
+            </Grid>
+        </Frame>
+        <Frame Grid.Row="3"  BackgroundColor="Transparent"  WidthRequest="30" Margin="0,-170,0,90">
+            <Grid RowDefinitions="auto" ColumnDefinitions="20,AUTO" ColumnSpacing="10" Margin="10,0,0,0">
+                <ImageButton  Grid.Column="1" Source="face1.png" BackgroundColor="Transparent" Margin="0,0,0,0"
+                              Clicked="TapGestureRecognizer_Tapped"/>
+                <ImageButton Grid.Row="0" Grid.Column="2" Source="t1.png" BackgroundColor="Transparent" Margin="40,0,0,0"
+                             Clicked="TapGestureRecognizer_Tapped"/>
+                <ImageButton Grid.Row="0" Grid.Column="3" Source="e1.png" BackgroundColor="Transparent" Margin="0,0,0,0"
+                             Clicked="TapGestureRecognizer_Tapped"/>
+      </Grid>           
+        </Frame>
+
+        <Frame Grid.Row="3"  BackgroundColor="Transparent"  WidthRequest="30" Margin="0,-100,0,0">
+
+            <StackLayout Orientation="Horizontal"   Grid.Row="1"  BackgroundColor="Transparent">
+                <Label  Text="Don't Have Account? " VerticalTextAlignment="Center" FontSize="16"/>
+                    <Label   Text="Sign Up" TextColor="DarkSlateBlue"  FontSize="18" Margin="0,20,0,0" FontAttributes="Bold"/>
+
+
+                    <StackLayout.GestureRecognizers >
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+            
+        </Frame>
+
+    </Grid>
+</ContentPage>
